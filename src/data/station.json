@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Prólogo con Abuelo",
+    "subtitle": "",
+    "img": "/2a.png",
+    "explicit": true
+  },
+  {
+    "id": 2,
+    "title": "The Wanderer",
+    "subtitle": "Feel More Radio",
+    "img": "/2b.png",
+    "explicit": false
+  },
+  {
+    "id": 3,
+    "title": "Michael Bublé & Carly Pearce",
+    "subtitle": "The Wanderer",
+    "img": "/2c.png",
+    "explicit": false
+  },
+  {
+    "id": 4,
+    "title": "Stephan Moccio",
+    "subtitle": "The Wanderer",
+    "img": "/2d.png",
+    "explicit": false
+  },
+  {
+    "id": 5,
+    "title": "Julia Michaels",
+    "subtitle": "The Wanderer",
+    "img": "/2e.png",
+    "explicit": false
+  },
+  {
+    "id": 6,
+    "title": "Karri & Travis Mills",
+    "subtitle": "The Wanderer",
+    "img": "/2f.png",
+    "explicit": false
+  }
+]

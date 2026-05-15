@@ -1,0 +1,38 @@
+/* Sidebar bloccata a sinistra */
+.sidebar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  z-index: 1020;
+}
+
+/* Testi Card */
+.text-readable {
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Sezione Centrale */
+.main-content-wrapper {
+  margin-left: 0;
+  min-height: 100vh;
+  padding-bottom: 90px;
+}
+
+@media (min-width: 768px) {
+  .main-content-wrapper {
+    margin-left: 240px;
+  }
+}
+
+/* Footer */
+.footer-content {
+  margin-left: 0;
+  margin-bottom: 90px;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    margin-left: 240px;
+  }
+}
