@@ -4,15 +4,15 @@ const CardMain = () => {
   return (
     <Container fluid>
       <h1 className="text-white fw-bold my-2">Novità</h1>
-      <Carousel indicators={false} interval={null} className="custom-carousel">
+      <Carousel indicators={false} interval={null}>
         {/* SLIDE 1 */}
         <Carousel.Item>
           <Row className="gy-4">
             {/* Card 1 */}
             <Col xs={12} md={6}>
-              <Card className="bg-dark text-white border-0 h-100">
+              <Card className=" text-white border-0 h-100">
                 <Card.Img src="/1a.png" alt="Mayhem" />
-                <Card.ImgOverlay className="d-flex flex-column justify-content-end gradient-overlay">
+                <Card.ImgOverlay className="d-flex flex-column justify-content-end">
                   <Card.Subtitle className="mb-2 text-light text-readable small">
                     NUOVA STAZIONE RADIO
                   </Card.Subtitle>
@@ -28,9 +28,9 @@ const CardMain = () => {
 
             {/* Card 2 */}
             <Col xs={12} md={6} className="d-none d-md-block">
-              <Card className="bg-dark text-white border-0 h-100">
+              <Card className=" text-white border-0 h-100">
                 <Card.Img src="/1b.png" alt="Successi" />
-                <Card.ImgOverlay className="d-flex flex-column justify-content-end gradient-overlay">
+                <Card.ImgOverlay className="d-flex flex-column justify-content-end">
                   <Card.Subtitle className="mb-2 text-light text-readable small">
                     NUOVA STAZIONE RADIO
                   </Card.Subtitle>
@@ -51,9 +51,9 @@ const CardMain = () => {
           <Row className="gy-4">
             {/* Card 1 */}
             <Col xs={12} md={6}>
-              <Card className="bg-dark text-white border-0 h-100">
+              <Card className=" text-white border-0 h-100">
                 <Card.Img src="/1c.png" alt="Mayhem" />
-                <Card.ImgOverlay className="d-flex flex-column justify-content-end gradient-overlay">
+                <Card.ImgOverlay className="d-flex flex-column justify-content-end">
                   <Card.Subtitle className="mb-2 text-light text-readable small">
                     NUOVA STAZIONE RADIO
                   </Card.Subtitle>

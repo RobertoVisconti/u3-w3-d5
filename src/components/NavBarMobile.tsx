@@ -2,7 +2,7 @@ import { Container, Image, Nav, Navbar } from "react-bootstrap";
 
 const NavBarMobile = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="md" className="d-md-none">
+    <Navbar variant="dark" expand="md" className="d-md-none">
       <Container fluid>
         <Navbar.Brand href="#">
           <Image

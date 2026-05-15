@@ -1,9 +1,10 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import fetchReducer from "../reducers/fetchReducers";
-
+import playerReducer from "../reducers/playerReducers";
 
 const mainReducer = combineReducers({
     fetch: fetchReducer,
+    player: playerReducer,
 })
 
 const store = configureStore({

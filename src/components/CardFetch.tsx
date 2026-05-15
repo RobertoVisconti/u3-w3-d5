@@ -3,9 +3,15 @@ import { Card, Carousel, Col, Row, Spinner, Alert } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch, RootState } from "../redux/store";
 import { getFetchAction } from "../redux/actions";
+import { setCurrentTrackAction } from "../redux/actions";
+import type { Track } from "../interfaces/interfaces";
 
 const CardFetch = () => {
   const dispatch = useDispatch<AppDispatch>();
+
+  const handlePlay = (track: Track) => {
+    dispatch(setCurrentTrackAction(track));
+  };
 
   const tracks = useSelector((state: RootState) => state.fetch.fetch);
   const error = useSelector((state: RootState) => state.fetch.isError);
@@ -45,17 +51,17 @@ const CardFetch = () => {
         </span>
       </div>
 
-      <Carousel
-        indicators={false}
-        interval={null}
-        className="custom-grid-carousel"
-      >
+      <Carousel indicators={false} interval={null}>
         {chunks.map((chunk, index) => (
           <Carousel.Item key={index}>
             <Row className="g-3">
               {chunk.map((track) => (
                 <Col key={track.id} xs={6} md={4} lg={2} className="mb-4">
-                  <Card className="bg-transparent border-0 text-white h-100">
+                  <Card
+                    onClick={() => handlePlay(track)}
+                    style={{ cursor: "pointer" }}
+                    className="bg-transparent border-0 text-white h-100"
+                  >
                     <div className="position-relative">
                       <Card.Img
                         src={track.album.cover_big}

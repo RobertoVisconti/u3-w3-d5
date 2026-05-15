@@ -1,14 +1,16 @@
 import type { Dispatch } from 'redux';
-import type { DeezerResponse } from "../../interfaces/interfaces";
+import type { DeezerResponse, Track } from "../../interfaces/interfaces";
 
+
+// Per la fetch
 export const GET_FETCH = 'GET_FETCH';
 export const GET_FETCH_ERROR = 'GET_FETCH_ERROR';
 
-export const getFetchAction = () => {
+export const getFetchAction = (query: string = 'mengoni') => {
     
     return async (dispatch: Dispatch) => {
         try {
-            const res = await fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=mengoni');
+            const res = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`);
             
             if (res.ok) {
                 const data: DeezerResponse = await res.json();
@@ -28,3 +30,12 @@ export const getFetchAction = () => {
         }
     };
 };
+
+
+// Per la musica
+export const SET_CURRENT_TRACK = 'SET_CURRENT_TRACK';
+
+export const setCurrentTrackAction = (track: Track) => ({
+  type: SET_CURRENT_TRACK,
+  payload: track,
+});

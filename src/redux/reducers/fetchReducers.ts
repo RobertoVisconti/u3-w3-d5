@@ -17,7 +17,7 @@ const fetchReducer = (state = initialState, action: { type: string; payload: Tra
     case GET_FETCH:
       return {
         ...state,
-        fetch: action.payload as Track[], // Cast sicuro al tipo Track
+        fetch: action.payload as Track[], 
         isError: '',
       };
     case GET_FETCH_ERROR:
