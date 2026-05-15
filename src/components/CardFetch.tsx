@@ -20,7 +20,8 @@ const CardFetch = () => {
     dispatch(getFetchAction());
   }, [dispatch]);
 
-  const chunkSize = 12;
+  const isMobile = window.innerWidth < 768;
+  const chunkSize = isMobile ? 6 : 12;
   const chunks = [];
   for (let i = 0; i < tracks.length; i += chunkSize) {
     chunks.push(tracks.slice(i, i + chunkSize));
@@ -56,11 +57,11 @@ const CardFetch = () => {
           <Carousel.Item key={index}>
             <Row className="g-3">
               {chunk.map((track) => (
-                <Col key={track.id} xs={6} md={4} lg={2} className="mb-4">
+                <Col key={track.id} xs={6} lg={2} className="mb-4">
                   <Card
                     onClick={() => handlePlay(track)}
                     style={{ cursor: "pointer" }}
-                    className="bg-transparent border-0 text-white h-100"
+                    className="bg-transparent border-0 text-white h-100 music-card"
                   >
                     <div className="position-relative">
                       <Card.Img

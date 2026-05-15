@@ -23,6 +23,24 @@
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
+/* Effetto card al click */
+.music-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.music-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.music-card:hover img {
+  filter: brightness(1.1);
+}
+
 /* Testi Card */
 .text-readable {
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);

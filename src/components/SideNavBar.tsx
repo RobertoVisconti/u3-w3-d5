@@ -51,7 +51,7 @@ const SideNavBar = () => {
         </Form>
         <Nav.Link
           href="#"
-          className="text-white d-flex align-items-center opacity-75 py-2"
+          className="text-white d-flex align-items-center  py-2"
         >
           <BsHouseDoor className="me-3 text-danger" /> Home
         </Nav.Link>
@@ -63,7 +63,7 @@ const SideNavBar = () => {
         </Nav.Link>
         <Nav.Link
           href="#"
-          className="text-white d-flex align-items-center opacity-75 py-2"
+          className="text-white d-flex align-items-center py-2"
         >
           <BiBroadcast className="me-3 text-danger" /> Radio
         </Nav.Link>
